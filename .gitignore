@@ -1,1 +1,30 @@
-Nothing to output - the modified file is just README.md which is a source/config file and no build artifacts, dependencies, or temp files are present in the changes.
+```
+# Build artifacts
+release/build.sh
+release/*.o
+release/*.obj
+release/*.exe
+release/*.dll
+release/*.so
+release/*.a
+release/*.out
+
+# Dependencies
+release/node_modules/
+release/venv/
+release/.venv/
+release/target/
+
+# Logs and temp files
+release/*.log
+release/*.tmp
+
+# Editors
+release/.vscode/
+release/.idea/
+
+# Environment
+release/.env
+release/.env.local
+release/*.env.*
+```

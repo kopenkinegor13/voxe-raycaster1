@@ -1,39 +1,62 @@
-# voxe-raycaster1
+# Voxel Engine - C++ OpenGL
 
-Raycasting engine project.
+Легкий воксельный движок в стиле Minecraft, написанный на C++ с использованием OpenGL.
+Без лишних библиотек: цветные блоки, контурная обводка, генерация мира, физика.
 
-## Description
+## Установка зависимостей (Linux/Ubuntu/Debian)
 
-This project implements a raycasting engine for rendering 3D-like environments in real-time.
+Откройте терминал и выполните:
 
-## Getting Started
+```bash
+sudo apt update
+sudo apt install build-essential libsdl2-dev libglew-dev libgl1-mesa-dev make
+```
 
-### Prerequisites
+## Сборка и запуск
 
-- [List any dependencies or requirements here]
+```bash
+make        # Скомпилировать проект
+make run    # Запустить игру
+make clean  # Очистить файлы сборки
+```
 
-### Installation
+## Управление
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd voxe-raycaster1
-   ```
+- **W, A, S, D** — Перемещение
+- **Пробел** — Прыжок
+- **Мышь** — Обзор камеры
+- **ESC** — Выход
 
-2. [Add installation steps here]
+## Структура проекта
 
-## Usage
+```
+voxel-engine/
+├── Makefile          # Файл сборки
+├── README.md         # Документация
+├── src/
+│   ├── main.cpp      # Точка входа, игровой цикл
+│   ├── math3d.h      # Математические функции (матрицы, векторы)
+│   ├── shader.h/cpp  # Класс шейдеров OpenGL
+│   ├── camera.h/cpp  # Камера и управление видом
+│   ├── chunk.h/cpp   # Генерация чанков и мешей
+│   └── renderer.h/cpp# Рендеринг мешей
+```
 
-[Add usage instructions here]
+## Особенности
 
-## Contributing
+- Процедурная генерация ландшафта с использованием шума Перлина
+- Различные типы блоков: трава, земля, камень, вода, песок, дерево, листва
+- Физика игрока: гравитация, коллизии, прыжки
+- Двухпроходный рендеринг: сплошные цвета + чёрная обводка
+- Система чанков 16x32x16
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Технологии
 
-## License
+- **C++11**
+- **OpenGL 3.3 Core Profile**
+- **SDL2** — Окно и ввод
+- **GLEW** — Загрузка функций OpenGL
 
-This project is licensed under the MIT License.
+## Лицензия
 
-## Acknowledgments
-
-- Raycasting algorithm inspiration
+MIT

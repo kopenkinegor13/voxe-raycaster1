@@ -1,30 +1,7 @@
 ```
+# Compressed files
+*.zip
+
 # Build artifacts
-release/build.sh
-release/*.o
-release/*.obj
-release/*.exe
-release/*.dll
-release/*.so
-release/*.a
-release/*.out
-
-# Dependencies
-release/node_modules/
-release/venv/
-release/.venv/
-release/target/
-
-# Logs and temp files
-release/*.log
-release/*.tmp
-
-# Editors
-release/.vscode/
-release/.idea/
-
-# Environment
-release/.env
-release/.env.local
-release/*.env.*
+release/
 ```

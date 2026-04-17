@@ -104,8 +104,8 @@ int main(){
         Vec3 inp={0,0,0};
         if(k[SDL_SCANCODE_W]) { inp.x+=fwd.x; inp.z+=fwd.z; }
         if(k[SDL_SCANCODE_S]) { inp.x-=fwd.x; inp.z-=fwd.z; }
-        if(k[SDL_SCANCODE_A]) { inp.x-=rgt.x; inp.z-=rgt.z; }
-        if(k[SDL_SCANCODE_D]) { inp.x+=rgt.x; inp.z+=rgt.z; }
+        if(k[SDL_SCANCODE_A]) { inp.x+=rgt.x; inp.z+=rgt.z; } // Исправлено: + для влево
+        if(k[SDL_SCANCODE_D]) { inp.x-=rgt.x; inp.z-=rgt.z; } // Исправлено: - для вправо
         float il=sqrt(inp.x*inp.x+inp.z*inp.z);
         if(il>0.01f){ inp.x/=il; inp.z/=il; player.vel.x=inp.x*spd; player.vel.z=inp.z*spd; }
         else { player.vel.x*=0.8f; player.vel.z*=0.8f; }
